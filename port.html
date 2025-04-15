@@ -1,0 +1,607 @@
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&amp;display=swap" rel="stylesheet">
+  <style>
+      /* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Body and Default Settings */
+body {
+  background-color: #1d1f21;
+  color: #f0f0f0;
+  line-height: 1.6;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: #00adb5;
+}
+
+ul {
+  list-style: none;
+}
+
+h2, h3 {
+  color: #00adb5;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Navbar */
+header {
+  background-color: #121212;
+  padding: 20px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1800px;
+  margin: 0 auto;
+  /* padding: 0 20px;  */
+}
+
+.logo img{
+  border-radius: 100%;
+  height: 90px;
+  width: 90px;
+  margin-left: 30px;
+ 
+}
+
+.nav-links li {
+  display: inline;
+  margin: 0 15px;
+  margin-right: 30px;
+}
+
+.nav-links a {
+  color: #f0f0f0;
+  font-size: xx-large;
+  font-weight: 400;
+  transition: color 0.3s ease;
+  padding-left: 40px;
+}
+
+.nav-links a:hover {
+  color: #00adb5;
+}
+
+/* main Section */
+.main {
+  background: url('hero-image.jpg') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+
+.main .content {
+  z-index: 1;
+}
+
+.main h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.main span {
+  color: #00adb5;
+}
+
+.main p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  background-color: #00adb5;
+  padding: 12px 30px;
+  color: #fff;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #007a7b;
+}
+
+/* About Section */
+.about {
+  padding: 100px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+  color: #ccc;
+}
+.about p:hover{
+  font-size: larger;
+  transform: translatex(-5px);
+}
+
+/* Qualification Section */
+.qualification {
+  padding: 100px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+  background: linear-gradient(135deg, #222, #333);
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.qualification ul {
+  list-style-type: none;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin: 20px auto;
+  max-width: 800px;
+  color: #f0f0f0;
+}
+
+.qualification li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background: #1d1f21;
+  border-radius: 8px;
+  margin: 10px 0;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.qualification li:hover {
+  background: #00adb5;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.qualification .icon {
+  font-size: 1.5rem;
+  margin-right: 15px;
+  color: #00adb5;
+  transition: color 0.3s ease;
+}
+
+.qualification li:hover .icon {
+  color: #fff;
+}
+
+
+
+/* Skills */
+.skills {
+  padding: 40px 20px;
+  max-width: 1100px;
+  height: 400px;
+  margin-top: 70px;
+  margin-left: 200px;
+  margin-right: 200px;
+  text-align: center;
+  background: linear-gradient(135deg, #222, #333);
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+.skills td{
+  text-align: center;
+}
+.certification {
+  padding: 40px 20px;
+  max-width: 1100px;
+  height: 600px;
+  margin-top: 70px;
+  margin-left: 200px;
+  margin-right: 200px;
+  text-align: center;
+  background: linear-gradient(135deg, #222, #333);
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+
+}
+.certification th{
+  color: rgb(218, 205, 205);
+}
+
+
+
+table {
+  width: 90%;
+  border-collapse: collapse;
+  margin-left: 5%;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+th{
+  color: #98f47e;
+  font-size: x-large;
+}
+th:hover,td:hover{
+  background: linear-gradient(#444,#1d1f21);
+  cursor: pointer;
+}
+
+/* Projects Section */
+.projects {
+  padding: 100px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  background: linear-gradient(#121212,#444,#1d1f21,#121212);
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+}
+
+.project-img {
+  height: 200px;
+  background: #444;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+.project-img img{
+  height: 200px;
+  width: 300px;
+  border-radius: 10px;
+}
+
+
+.project-info p {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+.btn-light {
+  background-color: transparent;
+  border: 2px solid #00adb5;
+  color: #00adb5;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn-light:hover {
+  background-color: #00adb5;
+  color: #fff;
+}
+
+/* Contact */
+.contact {
+  padding: 100px 20px;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+input, textarea {
+  padding: 15px;
+  width: 100%;
+  max-width: 500px;
+  background: linear-gradient(#444,#121212);
+  color: #fff;
+  border: 1px solid #555;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+
+button {
+  background-color: #00adb5;
+  color: #fff;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+a{
+  color: #ccc;
+}
+
+button:hover {
+  background-color: #007a7b;
+}
+
+/* Footer */
+footer {
+  background-color: #121212;
+  text-align: center;
+  padding: 20px;
+  color: #fff;
+  margin-top: 50px;
+}
+
+body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0f172a; /* Slate-900 */
+      color: #f1f5f9;
+    }
+
+    .contact-section {
+      padding: 60px 20px;
+      text-align: center;
+      background-color: #0f172a;
+    }
+
+    .contact-section h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #38bdf8;
+    }
+
+    .contact-section p {
+      font-size: 18px;
+      color: #cbd5e1;
+    }
+
+    /* Footer Styles */
+    .contact-footer {
+      background-color: #1e293b; /* Slate-800 */
+      color: #f1f5f9; /* Slate-100 */
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    .footer-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .contact-info {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0 0;
+    }
+
+    .contact-info li {
+      margin: 12px 0;
+      font-size: 18px;
+    }
+
+    .contact-info a {
+      color: #38bdf8;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .contact-info a:hover {
+      color: #0ea5e9;
+    }
+
+    .contact-info i {
+      margin-right: 8px;
+      color: #facc15; /* Amber */
+    }
+
+
+  </style>
+<style type="text/css" id="operaUserStyle"></style></head>
+<body>
+  <!-- Navbar -->
+  <header>
+      <nav>
+          <div class="logo"><img src="photo.png"></div>
+          <ul class="nav-links">
+              <li><a href="#about">About</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
+          </ul>
+      </nav>
+  </header>
+
+  <!-- Main -->
+  <section class="main">
+      <div class="content">
+          <h1>Hello, I'm <span>Yash Saraswat</span></h1>
+          <p>A Creative <span>AI Developer</span> crafting beautiful web experiences.</p>
+          <a href="https://github.com/yash-316" class="btn">Explore My Work</a>
+      </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="about">
+      <h2>About Me</h2>
+      <p>I’m Yash Saraswat, a passionate and ambitious B.Tech student specializing in Computer Science and Engineering (CSE) with a focus on Artificial Intelligence and Machine Learning at Lovely Professional University. I have a strong academic background and a curious mind, always exploring how technology can solve real-world problems.</p>
+  </section>
+
+  <!-- Qualification -->
+  <section id="qualification" class="qualification">
+      <h2>Qualifications</h2>
+      <ul>
+          <li><span class="icon">🎓</span>Bachelor's Degree in Computer Science (AI/ML) from Lovely Professional University University</li>
+          <li><span class="icon">📜</span>Completed Class 10 and 12 from Green Willow Public School, Mathura</li>
+          <li><span class="icon">💻</span>Over 3 years of experience in front-end development and UI/UX design</li>
+          <li><span class="icon">⚙️</span>Strong foundation in responsive design and performance optimization</li>
+      </ul>
+  </section>
+
+
+  <!-- skills -->
+  <div id="skills" class="skills">
+      <h2>Skills</h2>
+      <table>
+          <tbody><tr>
+              <th>Skill</th>
+              <th>Level</th>
+          </tr>
+          <tr>
+              <td>HTML</td>
+              <td>Expert</td>
+          </tr>
+          <tr>
+              <td>CSS</td>
+              <td>Advanced</td>
+          </tr>
+          <tr>
+              <td>JavaScript</td>
+              <td>Intermediate</td>
+          </tr>
+          <tr>
+              <td>Java</td>
+              <td>Intermediate</td>
+          </tr>
+      </tbody></table>
+  </div>
+
+  <div id="certification" class="certification">
+    <h2>CERTIFICATIONS</h2>
+    <table>
+        <tbody><tr>
+            <th>COMPUTER BASICS CERTIFICATE FROM IBM SKILL BUILD</th>
+            
+        </tr>
+        <tr>
+            <th>CERTIFICATE OF WORKSHOP ON BUILD YOUR BRAND FAST BY TEAM ZILLION</th>
+            
+        </tr>
+        <tr>
+            <th>CERTIFICATE ON CSS BASICS FROM HACKER RANK</th>
+            
+        </tr>
+        <tr>
+            <th>CERTIFICATE OF AI TOOLS WORKSHOP FROM BE10X</th>
+            
+        </tr>
+        <tr>
+            <th>CERTIFICATE OF MOOC ON BASICS PYTHON FROM SKILLERA</th>
+            
+        </tr>
+        <tr>
+          <th>CERTIFICATE OF MOOC ON AI AND ML FROM SKILLERA</th>
+          
+      </tr>
+      <tr>
+        <th>CERTIFICATE OF INTERNSHIP IN KODACY IN AI AND ML</th>
+        
+    </tr>
+    </tbody></table>
+    
+</div>
+
+  <!-- Projects -->
+  <div id="projects" class="projects">
+      <h2>Featured Projects</h2>
+      <div class="project-grid">
+          <div class="project-card">
+              <div class="project-img"><img src="pet.jpeg" alt=""></div>
+              <div class="project-info">
+                  <h3>Pet-O-Mania</h3>
+                  <p>A Social Media Platform For Pet Owners. Where One Can Show Their Pet's Skills And Buy Their Equipments. This Site Also Has A Section Where One Can Buy His Favorite Pet.</p>
+                  
+              </div>
+          </div>
+          <div class="project-card">
+              <div class="project-img"><img src="noice.jpeg"></div>
+              <div class="project-info">
+                  <h3>Noise Pollution</h3>
+                  <p>A responsive software for veiwing noise pollution.</p>
+                  
+              </div>
+          </div>
+          <div class="project-card">
+              <div class="project-img"><img src="cloth.jpg" alt=""></div>
+              <div class="project-info">
+                  <h3>ALPHA ATTIRE</h3>
+                  <p>An elegant website with a focus on design and user experience.  This website is a fashion store where you can buy your favorite clothes.</p>
+
+                  
+              </div>
+          </div>
+      </div>
+  </div>
+
+  
+
+  <!-- Footer -->
+  <section class="contact-section">
+    <h2>Get in Touch</h2>
+    <p>I’d love to connect with you! Feel free to reach out anytime.</p>
+  </section>
+
+  <!-- 🔻 Footer with Contact Info -->
+  <footer class="contact-footer">
+    <div class="footer-container">
+      <h2>Contact Me</h2>
+      <ul class="contact-info">
+        <li>
+          <a href="https://www.linkedin.com/in/yashozha/" target="_blank">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+        </li>
+        <li>
+          <a href="mailto:yashozha07@gmail.com">
+            <i class="fas fa-envelope"></i> yashozha07@gmail.com
+          </a>
+        </li>
+        <li>
+          <i class="fas fa-phone"></i> +91-7248445544
+        </li>
+        <li>
+          <a href="https://github.com/yash-316" target="_blank">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+  <script>
+      function submission(){
+          confirm("Are You Sure You Want To Submit")
+      }
+  </script>
+
+</body></html>
